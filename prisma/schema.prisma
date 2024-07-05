@@ -12,20 +12,22 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 model Consumo {
-  id         Int      @id @default(autoincrement())
-  nameClient String
-  clientId  Int
+  id                Int       @id @default(autoincrement())
+  nameClient        String
+  clientId          Int
   codUniqueElectric Int
-  meterNumber  Float
-  typeConsuption   String
-  startDate     DateTime
-  endDate   DateTime
-  description String
-  previousReading Float
-  currentReading Float
-  contractAccount BigInt
-  billedDays  Int
-  consuptionTotal Int
-  total  Float
+  meterNumber       Float
+  typeConsumption   String
+  startDate         DateTime
+  endDate           DateTime
+  description       String
+  previousReading   Float
+  currentReading    Float
+  contractAccount   BigInt
+  billedDays        Int
+  consumptionTotal  Int
+  total             Float
 }
+
